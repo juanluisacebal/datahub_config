@@ -11,7 +11,12 @@
 #              cat backup_datahub_<timestamp>.sql_part_* > backup_datahub_<timestamp>.sql
 #              Or use: ./precommit.sh --reconstruct <backup_folder>
 #####################################################################
-[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+#[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+export PATH="$HOME/.local/bin:$PATH"
+if ! command -v datahub &> /dev/null; then
+  echo "❌ 'datahub' command not found. Is it installed and in PATH?"
+  exit 1
+fi
 RUTA_BACKUP_DATAHUB="${RUTA_BACKUP_DATAHUB:-$HOME/.datahub}"
 echo "📂 Using backup directory: $RUTA_BACKUP_DATAHUB"
 
