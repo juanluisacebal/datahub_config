@@ -63,7 +63,7 @@ fi
 
 # Create folder name and timestamp
 folder=$(date +"%Y_%m")
-timestamp=$(date +"%Y%m%d")
+timestamp=$(date +"%Y%m%d_%H%M%S")
 
 # Create the full backup file path
 backup_dir="$RUTA_BACKUP_DATAHUB/datahub_backup/$folder"
@@ -74,9 +74,9 @@ backup_file="$backup_dir/backup_datahub_${timestamp}.sql"
 echo "📦 Creating backup at: $backup_file"
 datahub docker quickstart --backup --backup-file "$backup_file"
 
-# Split the backup file into parts of 100MB each
-echo "🪓 Splitting backup file into 100MB chunks..."
-split -b 100M "$backup_file" "${backup_file}_part_"
+# Split the backup file into parts of 50MB each
+echo "🪓 Splitting backup file into 50MB chunks..."
+split -b 50M "$backup_file" "${backup_file}_part_"
 
 # Remove the original full backup to save space
 rm "$backup_file"
