@@ -11,6 +11,8 @@
 #              cat backup_datahub_<timestamp>.sql_part_* > backup_datahub_<timestamp>.sql
 #              Or use: ./precommit.sh --reconstruct <backup_folder>
 #####################################################################
+source .bashrc
+
 
 # Check if the environment variable is set
 if [ -z "$RUTA_BACKUP_DATAHUB" ]; then
