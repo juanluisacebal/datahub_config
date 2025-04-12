@@ -12,13 +12,9 @@
 #              Or use: ./precommit.sh --reconstruct <backup_folder>
 #####################################################################
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+RUTA_BACKUP_DATAHUB="${RUTA_BACKUP_DATAHUB:-$HOME/.datahub}"
+echo "📂 Using backup directory: $RUTA_BACKUP_DATAHUB"
 
-
-# Check if the environment variable is set
-if [ -z "$RUTA_BACKUP_DATAHUB" ]; then
-  echo "❌ Error: Environment variable RUTA_BACKUP_DATAHUB is not set."
-  exit 1
-fi
 
 # Interactive restore menu
 if [ "$1" == "--menu" ]; then
