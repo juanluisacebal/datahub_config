@@ -1,0 +1,3 @@
+[submodule "datahub_backup"]
+	path = datahub_backup
+	url = git@github.com:juanluisacebal/datahub_backup.git
