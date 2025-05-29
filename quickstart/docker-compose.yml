@@ -1,6 +1,9 @@
+
 networks:
   default:
+
     name: datahub_network
+
 services:
   broker:
     depends_on:
