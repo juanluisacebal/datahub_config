@@ -1,0 +1,11 @@
+services:
+  dataiku-dss:
+    image: dataiku/dss:latest
+    platform: linux/amd64
+    container_name: dataiku-dss
+    restart: unless-stopped
+    ports:
+      - "11000:11000"
+    volumes:
+      - /srv/dataiku/data:/data
+      - /srv/dataiku/config:/config
