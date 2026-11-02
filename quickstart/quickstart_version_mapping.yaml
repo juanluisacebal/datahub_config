@@ -1,7 +1,7 @@
 quickstart_version_map:
   default:
     composefile_git_ref: master
-    docker_tag: v1.7.0.1
+    docker_tag: v1.8.0
     mysql_tag: '8.2'
   head:
     composefile_git_ref: master
@@ -12,8 +12,8 @@ quickstart_version_map:
     docker_tag: quickstart
     mysql_tag: '8.2'
   stable:
-    composefile_git_ref: v1.7.0.1
-    docker_tag: v1.7.0.1
+    composefile_git_ref: v1.8.0
+    docker_tag: v1.8.0
     mysql_tag: '8.2'
   v0.13.0:
     composefile_git_ref: master
